@@ -69,7 +69,7 @@ namespace LogParser.Normal
                 }
 
                 // Наиболее частый IP-адрес
-                var mostFrequentIp = ipAddresses.Max();
+                var mostFrequentIp = ipAddresses.OrderByDescending(x=>x.Value).FirstOrDefault();
 
                 // Вывод результатов
                 Console.WriteLine("Анализ завершён:");
